@@ -1,137 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Courses Website Design</title>
+    <title>Netflix Clone</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <section class="header">
-        <nav>
-            <a href="index.html"><img src="Website images task 2/logo.png" alt="Logo"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hidemenu()"></i>
-                <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>R
-                    <li><a href="">COURSES</a></li>
-                    <li><a href="">CONTACT</a></li>
-                </ul>
-            </div> 
-            <i class="fa fa-bars" onclick="showmenu()"></i>
-        </nav>
-        <div class="text-box">
-            <h1>Up Skill Hub</h1>
-            <p>Welcome to our Online Course Platform — your gateway to learning new skills anytime, anywhere. We offer a wide range of professional courses designed by industry experts to help you grow in your career and personal development. With an easy-to-navigate interface, detailed course information, and seamless enrollment process, our platform ensures a smooth learning experience for students of all levels. <br>Start your learning journey with us today!</p>
-            <a href="#" class="hero-btn">Visit Us to Know More</a>
-        </div>
-    </section>
-    
-    <!---------- Courses ---------->
-    <section class="course">
-        <h1>Courses We Offer</h1>
-        <div class="row">
-            <div class="course-col">
-                <h3>Web Development</h3>
-                <p>Web development refers to the tasks associated with creating, building, and maintaining websites and web applications that run online on a browser.</p>
-            </div>
-            <div class="course-col">
-                <h3>Ethical Hacking</h3>
-                <p>Ethical hackers legally attempt to find vulnerabilities in systems to help organizations enhance their security.</p>
-            </div>
-            <div class="course-col">
-                <h3>Data Science</h3>
-                <p>Data science combines programming, advanced analytics, AI, and domain expertise to extract actionable insights from data.</p>
-            </div>
-            <div class="course-col">
-                <h3>Deep Learning</h3>
-                <p>Learn neural networks, CNNs, RNNs, LSTMs, Transformers, and optimization strategies like Dropout, BatchNorm, and more.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!---------- About Us / Campus ---------->
-    <section class="campus">
-        <h1>About Us</h1>
-        <p>At Up Skill Hub, we offer a wide range of online courses designed to help students, professionals, and enthusiasts enhance their skills, stay ahead in their careers, and achieve their personal growth goals.</p>
-        <h2>Our Global Campuses Are Everywhere</h2>
-        <div class="row">
-            <div class="campus-col">
-                <a href="index.html"><img src="Website images task 2/london.png" alt="Mumbai Campus"></a>
-                <div class="layer">
-                    <h3>MUMBAI</h3>
-                </div>
-            </div>
-            <div class="campus-col">
-                <a href="index.html"><img src="Website images task 2/newyork.png" alt="Delhi Campus"></a>
-                <div class="layer">
-                    <h3>DELHI</h3>
-                </div>
-            </div>
-            <div class="campus-col">
-                <a href="index.html"><img src="Website images task 2/washington.png" alt="Bangalore Campus"></a>
-                <div class="layer">
-                    <h3>BANGALORE</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!------ Registration Form Section ------->
-    <section class="registration">
-        <h1>Register for a Course</h1>
-        <p>Fill out the form below to enroll in your preferred course. Our team will contact you shortly.</p>
-        <div class="form-container">
-            <form action="#" method="POST">
-                <input type="text" name="fullname" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <input type="text" name="phone" placeholder="Phone Number" required>
-                <select name="course" required>
-                    <option value="">Select Course</option>
-                    <option value="Web Development">Web Development</option>
-                    <option value="Ethical Hacking">Ethical Hacking</option>
-                    <option value="Data Science">Data Science</option>
-                    <option value="Deep Learning">Deep Learning</option>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="header">
+            <img src="/images/logo.svg" alt="Netflix Logo" class="logo">
+            <div class="right-header">
+                <select class="language-select">
+                    <option>English</option>
+                    <option>हिन्दी</option>
                 </select>
-                <textarea name="message" rows="4" placeholder="Any specific queries?"></textarea>
-                <button type="submit" class="hero-btn">Submit</button>
-            </form>
+                <button class="sign-in-btn">Sign In</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Unlimited movies, TV <br>shows and more</h1>
+            <h2>Starts at ₹149. Cancel at any time.</h2>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-form">
+                <input type="email" placeholder="Email address">
+                <button>Get Started ></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trending Now Section -->
+    <section class="trending-now">
+        <h2>Trending Now</h2>
+        <div class="carousel-container">
+            <button class="arrow left" aria-label="Scroll left">&#10094;</button>
+            <div class="trending-cards" id="trending-cards">
+                <!-- Cards will be populated here -->
+            </div>
+            <button class="arrow right" aria-label="Scroll right">&#10095;</button>
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact" class="contact">
-        <h1>Contact Us</h1>
-        <div class="contact-info">
-            <div class="contact-item"><i class="fas fa-phone-alt"></i> +91 98765 43210</div>
-            <div class="contact-item"><i class="fas fa-envelope"></i> info@upskillhub.com</div>
-            <div class="contact-item"><i class="fab fa-whatsapp"></i> +91 98765 43210</div>
-            <div class="contact-item"><i class="fab fa-linkedin"></i> linkedin.com/company/upskillhub</div>
+    <!-- More Reasons Section -->
+    <section class="more-reasons">
+        <h2>More reasons to join</h2>
+        <div class="reason-cards">
+            <!-- Reason cards will be populated here -->
         </div>
     </section>
 
-    <!-- JS for Menu -->
-    <script>
-        function showMenu() {
-            document.getElementById("navLinks").style.right = "0";
-        }
-        function hideMenu() {
-            document.getElementById("navLinks").style.right = "-200px";
-        }
-    </script>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <!-- FAQ items will be populated here -->
+        </div>
+    </section>
 
-    <!------JavaScript for Toggle Menu------->
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        function showmenu() {
-            navLinks.style.right = "0";
-        }
-        function hidemenu() {
-            navLinks.style.right = "-200px";
-        }
-    </script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-form">
+                <input type="email" placeholder="Email address">
+                <button>Get Started ></button>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <p>Questions? Call <a href="#">000-800-919-1743</a></p>
+            <div class="link-grid">
+                <a href="#">FAQ</a>
+                <a href="#">Help Centre</a>
+                <a href="#">Account</a>
+                <a href="#">Media Centre</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Jobs</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Speed Test</a>
+                <a href="#">Legal Notices</a>
+                <a href="#">Only on Netflix</a>
+            </div>
+            <div class="language-select">
+                <select>
+                    <option>English</option>
+                    <option>हिन्दी</option>
+                </select>
+            </div>
+            <p class="footer-bottom">Netflix India</p>
+            <p class="recaptcha-info">
+                This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                <a href="#">Learn more.</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
